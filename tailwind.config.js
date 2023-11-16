@@ -9,12 +9,6 @@ export default {
       xl: '1440px',
     },
 
-    fontFamily: {
-      sans: ['Lexend Deca', 'sans-serif'],
-      mono: ['Space Mono', 'monospace'],
-      body: ['Lexend Deca', 'sans-serif'],
-      heading: ['Space Mono', 'monospace'],
-    },
     fontSize: {
       xs: '0.9375rem', // 15px
       sm: '1.125rem', // 18px
@@ -49,6 +43,13 @@ export default {
         body: 'hsl(217 12% 62%)',
         footer: '#333A44',
         cta: 'hsl(216 17% 35%)',
+      },
+
+      fontFamily: {
+        sans: ['Lexend Deca', 'sans-serif'],
+        mono: ['Space Mono', 'monospace'],
+        body: ['Lexend Deca', 'sans-serif'],
+        heading: ['Space Mono', 'monospace'],
       },
     },
   },

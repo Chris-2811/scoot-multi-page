@@ -87,7 +87,7 @@ h2,
 h3,
 h4,
 h5 {
-  @apply font-sans;
+  @apply font-heading;
   font-weight: bold;
 }
 
@@ -260,7 +260,7 @@ h5 {
     height: 1.5rem;
   }
 
-  .mobile-nav-toggle > div {
+  .mobile-nav-toggle > span {
     height: 3px;
     @apply bg-primary;
     position: absolute;
@@ -464,6 +464,7 @@ h5 {
 @media (min-width: 1020px) {
   .hero {
     background-image: url(assets/images/home-hero-desktop.jpg);
+    padding-top: 9.5rem;
   }
 
   .locations .hero--subpage,

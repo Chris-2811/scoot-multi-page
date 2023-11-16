@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="primary-header">
+      <div
+        class="container flex justify-center md:items-center md:justify-between py-[1.375rem] relative"
+      >
+        <div class="md:flex items-center">
+          <div
+            class="logo md:mr-14 w-[4.6875rem] h-5 md:w-[6.6875rem] md:h-[1.78rem]"
+          >
+            <a href="index.html"><img src="assets/logo.svg" alt="scoot" /></a>
+          </div>
+          <button
+            class="mobile-nav-toggle md:hidden"
+            id="mobile-nav-toggle"
+            aria-controls="primary-navigation"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Menu</span>
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+          </button>
+          <nav
+            class="primary-navigation"
+            id="primary-navigation"
+            data-visible="false"
+            aria-label="primary-nav"
+          >
+            <ul
+              role="list"
+              class="flex flex-col md:flex-row gap-6 text-sm md:gap-8 md:text-xs md:font-heading md:text-secondary-light"
+            >
+              <li>
+                <a href="about.html" class="md:hover:text-primary">About</a>
+              </li>
+              <li>
+                <a href="location.html" class="md:hover:text-primary"
+                  >Location</a
+                >
+              </li>
+              <li>
+                <a href="careers.html" class="md:hover:text-primary">Careers</a>
+              </li>
+            </ul>
+            <div class="btn-nav">Get Scootin</div>
+          </nav>
+        </div>
+        <a href="#cta" class="btn-primary btn-primary-header md:inline-block">
+          Get Scootin
+        </a>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- Hero Section -->
+      <section
+        id="hero"
+        class="hero--subpage relative overflow-hidden text-center py-[3.75rem] md:py-[4.5rem] lg:py-[4.5rem]"
+      >
+        <div class="container lg:text-left">
+          <h1
+            class="text-heading-primary text-xl tracking-ls-100 max-w-[573px] mx-auto md:text-3xl lg:max-w-[500px] md:text-left md:mx-0"
+          >
+            About
+          </h1>
+        </div>
+        <img
+          src="assets/patterns/white-circles.svg"
+          alt=""
+          class="hidden absolute -right-10 top-[50%] -translate-y-[50%] md:block"
+        />
+      </section>
+
+      <!-- Feature Section  -->
+      <section
+        class="feature-section relative mt-[4.5rem] lg:mt-[7.5rem] overflow-hidden"
+      >
+        <div
+          class="container grid place-items-center gap-[7.5rem] md:gap-[8rem] text-center"
+        >
+          <!-- Feature 1 -->
+          <div
+            class="relative lg:w-full lg:flex lg:flex-row-reverse lg:items-center lg:text-left lg:justify-between"
+          >
+            <div class="relative">
+              <img
+                src="assets/images/digital-era.jpg"
+                class="rounded-full md:max-w-[445px] mx-auto lg:mx-0"
+                alt="telemetry"
+              />
+              <img
+                src="assets/patterns/left-upward-arrow.svg"
+                alt="arrow-left"
+                class="arrow arrow-digital"
+              />
+            </div>
+            <div class="">
+              <h3
+                class="mx-auto text-lg text-heading-secondary mt-[3.5rem] mb-8 md:mb-10 md:tracking-ls-200 max-w-[457px] lg:text-2xl lg:max-w-[445px] lg:mt-0 lg:mb-6 lg:mx-0"
+              >
+                Mobility for the digital ara
+              </h3>
+              <p class="max-w-[573px] lg:max-w-[445px]">
+                Getting around should be simple (and even fun!) for everyone. We
+                embrace technology to provide low cost, smart access to scooters
+                at your fingertips.
+              </p>
+            </div>
+          </div>
+          <!-- circle -->
+          <img
+            src="assets/patterns/circle.svg
+         "
+            alt=""
+            class="hidden md:block absolute top-[0rem] left-[90vw] -z-10 lg:left-[94vw]"
+          />
+
+          <!-- Feature 2 -->
+          <div
+            class="relative lg:w-full lg:flex lg:items-center lg:text-left lg:justify-between"
+          >
+            <img
+              src="assets/images/better-living.jpg"
+              class="rounded-full md:max-w-[445px] mx-auto lg:mx-0"
+              alt="telemetry"
+            />
+            <img
+              src="assets/patterns/right-arrow.svg"
+              alt="left-arrow"
+              class="arrow arrow-living"
+            />
+            <div class="">
+              <h3
+                class="mx-auto text-lg text-heading-secondary mt-[3.5rem] mb-8 md:mb-10 md:tracking-ls-200 max-w-[457px] lg:text-2xl lg:max-w-[445px] lg:mt-0 lg:mb-6 lg:mx-0"
+              >
+                Better urban living
+              </h3>
+              <p class="max-w-[573px] lg:max-w-[445px]">
+                We’re helping connect cities and bring people closer together.
+                Our scooters are also fully-electric and we offset the minimal
+                carbon footprint for each ride.
+              </p>
+            </div>
+          </div>
+          <img
+            src="assets/patterns/circle.svg
+        "
+            alt=""
+            class="hidden md:block absolute top-[46.5rem] right-[90vw] -z-10 lg:right-[94vw] lg:top-[36.5rem]"
+          />
+        </div>
+      </section>
+
+      <!-- Value Section -->
+      <section
+        class="feature-section-two mt-[7.5rem] mb-[7.5rem] md:mb-[9.0625rem] lg:mb-[12.5rem]"
+        id="feature-section-two"
+      >
+        <div class="container">
+          <h2 class="text-xl text-heading-secondary mb-[3rem] text-center">
+            Our Values
+          </h2>
+          <div
+            class="grid items-baseline text-center lg:grid-cols-3 lg:gap-[1.8rem]"
+          >
+            <div class="grid place-items-center">
+              <div class="relative rounded-full w-[15rem] h-[15rem]">
+                <img
+                  class="mx-auto lg:mx-0 rounded-full"
+                  src="assets/images/our-tech.jpg"
+                  alt=""
+                  class=""
+                />
+                <div
+                  class="absolute text-sm bottom-50% -translate-y-[50%] left-[50%] -translate-x-[50%] bg-primary rounded-full grid place-items-center text-heading-secondary w-[6rem] h-[6rem] z-10"
+                >
+                  01
+                </div>
+              </div>
+              <div class="mb-12 lg:mb-0">
+                <h3
+                  class="text-[1.125rem] text-heading-secondary mt-[4rem] mb-7"
+                >
+                  Our tech
+                </h3>
+                <p class="text-xs max-w-[457px]">
+                  We’re using cutting edge technology to drive accessible urban
+                  transportation forward. Our fully electric scooters are a joy
+                  to ride!
+                </p>
+              </div>
+            </div>
+            <div class="grid place-items-center">
+              <div class="relative rounded-full w-[15rem] h-[15rem]">
+                <img
+                  class="mx-auto lg:mx-0 rounded-full"
+                  src="assets/images/our-integrity.jpg"
+                  alt=""
+                  class=""
+                />
+                <div
+                  class="absolute text-sm bottom-50% -translate-y-[50%] left-[50%] -translate-x-[50%] bg-primary rounded-full grid place-items-center text-heading-secondary w-[6rem] h-[6rem] z-10"
+                >
+                  02
+                </div>
+              </div>
+              <div class="mb-12 lg:mb-0">
+                <h3
+                  class="text-[1.125rem] text-heading-secondary mt-[4rem] mb-7"
+                >
+                  Our Integrity
+                </h3>
+                <p class="text-xs max-w-[457px]">
+                  We are fully committed to deliver a great yet safe,
+                  sustainable micro-mobility experience in every city we serve.
+                </p>
+              </div>
+            </div>
+            <div class="grid place-items-center">
+              <div class="relative rounded-full w-[15rem] h-[15rem]">
+                <img
+                  class="mx-auto lg:mx-0 rounded-full"
+                  src="assets/images/our-community.jpg"
+                  alt=""
+                  class=""
+                />
+                <div
+                  class="absolute text-sm font-bold bottom-50% -translate-y-[50%] left-[50%] -translate-x-[50%] bg-primary rounded-full grid place-items-center text-heading-secondary w-[6rem] h-[6rem] z-10"
+                >
+                  03
+                </div>
+              </div>
+              <div class="mb-12 lg:mb-0">
+                <h3
+                  class="text-[1.125rem] text-heading-secondary mt-[4rem] mb-7"
+                >
+                  Our community
+                </h3>
+                <p class="text-xs max-w-[457px]">
+                  We’re using cutting edge technology to drive accessible urban
+                  transportation forward. Our fully electric scooters are a joy
+                  to ride!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section FAQ -->
+      <section id="faq" class="faq">
+        <div class="container">
+          <h2
+            class="text-heading-secondary text-lg md:text-2xl text-center mb-12 md:mb-[4rem]"
+          >
+            FAQs
+          </h2>
+          <div class="grid-container-faq--about">
+            <h3
+              class="text-heading-secondary text-base md:text-xl mb-8 text-center lg:text-left"
+            >
+              How it works
+            </h3>
+            <div>
+              <div
+                class="relative bg-secondary-lighter py-8 px-10 mb-4 hover:bg-primary-light cursor-pointer"
+              >
+                <h4 class="text-heading-secondary text-sm">
+                  How do I download the app?
+                </h4>
+                <p id="content" class="faq-content mt-6">
+                  To download the Scoot app, you can search “Scoot” in both the
+                  App and Google Play stores. An even simpler way to do it would
+                  be to click the relevant link at the bottom of this page and
+                  you’ll be re-directed to the correct page.
+                </p>
+                <img
+                  src="assets/icons/chevron.svg"
+                  alt="chevron"
+                  class="faq-toggle absolute top-10 right-6 lg:top-10 lg:right-10"
+                  id="faq-toggle"
+                  aria-expanded="false"
+                />
+              </div>
+              <div
+                class="relative bg-secondary-lighter py-8 px-10 mb-4 hover:bg-primary-light cursor-pointer"
+              >
+                <h4 class="text-heading-secondary text-sm">
+                  Can I find a nearby scooter?
+                </h4>
+                <p class="faq-content mt-6">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo
+                  voluptatem esse modi blanditiis? Molestias animi quibusdam
+                  sapiente rem, amet laboriosam.
+                </p>
+                <img
+                  src="assets/icons/chevron.svg"
+                  alt="chevron"
+                  class="faq-toggle absolute top-10 right-6 lg:top-10 lg:right-10"
+                  id="faq-toggle"
+                  aria-expanded="false"
+                />
+              </div>
+              <div
+                class="relative bg-secondary-lighter py-8 px-10 mb-4 hover:bg-primary-light cursor-pointer"
+              >
+                <h4 class="text-heading-secondary text-sm">
+                  Do I need a license to ride?
+                </h4>
+                <p class="faq-content mt-6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Necessitatibus reiciendis labore pariatur velit nihil ullam
+                  voluptate tenetur quaerat ut omnis. Alias non possimus
+                  accusamus nulla ut hic sint consequuntur reiciendis, saepe
+                  voluptatem sunt. Vel obcaecati iure quibusdam sed nulla
+                  ratione delectus itaque voluptatibus explicabo incidunt!
+                  Aliquam laboriosam iusto pariatur ad.
+                </p>
+                <img
+                  src="assets/icons/chevron.svg"
+                  alt="chevron"
+                  class="faq-toggle absolute top-10 right-6 lg:top-10 lg:right-10"
+                  id="faq-toggle"
+                  aria-expanded="false"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-container-faq--about lg:mt-[4rem]">
+            <h3
+              class="text-heading-secondary text-xl mb-8 mt-[4rem] text-center lg:text-left lg:m-0"
+            >
+              Save driving
+            </h3>
+            <div>
+              <div
+                class="relative bg-secondary-lighter py-8 px-10 mb-4 hover:bg-primary-light cursor-pointer"
+              >
+                <h4 class="text-heading-secondary text-sm">
+                  Shuold I wear a helmet?
+                </h4>
+                <p class="faq-content mt-6">
+                  Yes, please do! All cities have different laws. But we
+                  strongly strongly strongly recommend always wearing a helmet
+                  regardless of the local laws. We like you and we want you to
+                  be as safe as possible while Scooting.
+                </p>
+                <img
+                  src="assets/icons/chevron.svg"
+                  alt="chevron"
+                  class="faq-toggle absolute top-10 right-6 lg:top-10 lg:right-10"
+                  id="faq-toggle"
+                  aria-expanded="false"
+                />
+              </div>
+              <div
+                class="relative bg-secondary-lighter py-8 px-10 mb-4 hover:bg-primary-light cursor-pointer"
+              >
+                <h4 class="text-heading-secondary text-sm">
+                  How about the rules & regulations?
+                </h4>
+                <p class="faq-content mt-6">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Perspiciatis consectetur provident magnam harum dolore
+                  obcaecati ea facilis iusto hic repellendus. Blanditiis placeat
+                  ducimus quidem exercitationem quod rem non. Quibusdam, esse?
+                </p>
+                <img
+                  src="assets/icons/chevron.svg"
+                  alt="chevron"
+                  class="faq-toggle absolute top-10 right-6 lg:top-10 lg:right-10"
+                  id="faq-toggle"
+                  aria-expanded="false"
+                />
+              </div>
+              <div
+                class="relative bg-secondary-lighter py-8 px-10 mb-4 hover:bg-primary-light cursor-pointer"
+              >
+                <h4 class="text-heading-secondary text-sm">
+                  What if I damage my Scoot?
+                </h4>
+                <p class="faq-content mt-6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+                  hic, quas cumque molestiae aliquam voluptatem tempora fuga id
+                  nostrum dicta?
+                </p>
+                <img
+                  src="assets/icons/chevron.svg"
+                  alt="chevron"
+                  class="faq-toggle absolute top-10 right-6 lg:top-10 lg:right-10"
+                  id="faq-toggle"
+                  aria-expanded="false"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section CTA -->
+      <section id="cta" class="cta bg-cta py-[5.5rem] mt-[7.5rem]">
+        <div
+          class="container text-center lg:flex lg:justify-between lg:items-center"
+        >
+          <h2
+            class="text-lg text-heading-primary max-w-[457px] mx-auto md:tracking-ls-200 md:text-2xl lg:max-w-[415px] lg:text-left lg:mx-0"
+          >
+            Sign up and Scoot off today
+          </h2>
+          <div class="flex gap-4 justify-center mt-10">
+            <a href="https://www.apple.com/de/app-store/" target="_blank">
+              <img
+                src="assets/icons/app-store.svg"
+                alt="app-store"
+                class="w-[7.0625rem] h-10 lg:w-[10rem] lg:h-[3.5rem] cursor-pointer"
+              />
+            </a>
+            <a
+              href="https://play.google.com/store/apps?hl=de&gl=US"
+              target="_blank"
+            >
+              <img
+                src="assets/icons/google-play.svg"
+                alt="google-play-store"
+                class="w-[7.0625rem] h-10 lg:w-[10rem] lg:h-[3.5rem] cursor-pointer"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-footer pt-[4rem] pb-[5.5rem]">
+      <div
+        class="container text-center flex justify-center flex-col md:flex-row md:justify-between md:items-center md:gap-[5.5rem]"
+      >
+        <a href="index.html">
+          <img
+            src="assets/logo-light.svg"
+            alt="scoot"
+            class="w-[6.7rem] mx-auto md:mx-0 mb-10 md:mb-0"
+          />
+        </a>
+        <div class="md:flex justify-between flex-1">
+          <nav aria-label="footer-nav">
+            <ul
+              role="list"
+              class="flex flex-col text-secondary-light text-xs md:flex-row gap-4 md:gap-8 md:text-xs md: md:text-secondary-light"
+            >
+              <li>
+                <a href="about.html" class="md:hover:text-primary">About</a>
+              </li>
+              <li>
+                <a href="location.html" class="md:hover:text-primary"
+                  >Location</a
+                >
+              </li>
+              <li>
+                <a href="careers.html" class="md:hover:text-primary">Careers</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="socials flex gap-6 justify-center mt-[5.5rem] md:mt-0">
+            <a href="https://www.facebook.com/ " target="_blank"
+              ><img
+                src="assets/icons/facebook.svg"
+                alt="facebook"
+                aria-label="facebook"
+            /></a>
+            <a href="https://twitter.com/?lang=de " target="_blank"
+              ><img
+                src="assets/icons/twitter.svg"
+                alt="twitter.svg"
+                aria-label="twitter.svg"
+            /></a>
+            <a href="https://www.instagram.com/ " target="_blank"
+              ><img
+                src="assets/icons/instagram.svg"
+                alt="instagram.svg"
+                aria-label="instagram.svg"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Space+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --------------- */
+/* Reset */
+/* --------------- */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  @apply font-body text-xs text-body;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ----------------------- */
+/* Utility Classes */
+/* ----------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  @apply font-sans;
+  font-weight: bold;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.container {
+  max-width: 1100px;
+  padding-inline: 2rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-inline: 2.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    padding-inline: 0;
+  }
+}
+
+/* ------------------- */
+/* Components */
+/* ------------------- */
+
+/* buttons */
+
+.btn-primary {
+  display: inline-block;
+  @apply bg-primary text-xs font-mono;
+  color: white;
+  padding-block: 0.766rem;
+  width: 11.95rem;
+  border: 3px solid transparent;
+  z-index: 10;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn-primary-header {
+  display: none;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  @apply text-primary border-primary border-3;
+}
+
+.btn-nav {
+  @apply bg-primary text-xs font-mono;
+  color: white;
+  padding-block: 0.766rem;
+  width: 11.95rem;
+  border: 3px solid transparent;
+  z-index: 10;
+  text-align: center;
+  width: 100%;
+  max-width: 12rem;
+}
+
+/* FAQ chevron */
+
+.faq-toggle {
+  cursor: pointer;
+  transition: transform 0.4s linear;
+}
+
+.faq-toggle[aria-expanded='true'] {
+  transform: rotate(-180deg);
+}
+
+.faq-content {
+  display: none;
+}
+
+.faq-content.open {
+  display: block;
+}
+
+/* Location Indicator */
+.location-indicator {
+  position: absolute;
+  top: 3.1rem;
+  left: 6rem;
+}
+
+.location-indicator:nth-child(5) {
+  top: 3.7rem;
+  left: 33rem;
+}
+.location-indicator:nth-child(3) {
+  top: 1.3rem;
+  left: 15.4rem;
+}
+.location-indicator:nth-child(4) {
+  top: 10.25rem;
+  left: 30rem;
+}
+
+.location-indicator > div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7.5rem;
+  height: 2rem;
+  @apply bg-primary text-xs font-heading text-secondary font-bold;
+  z-index: 1;
+}
+
+.location-indicator > div::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 2rem;
+  height: 2rem;
+  @apply bg-primary;
+  transform: translateX(-50%) rotate(-45deg);
+  z-index: -1;
+}
+
+.world-image-tablet {
+  display: none;
+}
+
+.world-image-desktop {
+  display: none;
+}
+
+/* primary navigation */
+@media (max-width: 768px) {
+  .primary-navigation {
+    display: none;
+  }
+
+  .primary-navigation[data-visible='true'] {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    top: 64px;
+    width: 68%;
+    height: 100vh;
+    height: 100vh;
+    padding: 4rem 2rem 5.5rem 2rem;
+    color: white;
+    @apply bg-secondary;
+    z-index: 100;
+  }
+
+  .mobile-nav-toggle {
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .mobile-nav-toggle > div {
+    height: 3px;
+    @apply bg-primary;
+    position: absolute;
+    width: 1.5rem;
+    transform: rotate(0);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .one {
+    top: 0;
+  }
+
+  .two {
+    top: 8px;
+  }
+
+  .three {
+    top: 16px;
+  }
+
+  .mobile-nav-toggle[aria-expanded='true'] .one {
+    top: 6px;
+    transform: rotate(45deg);
+  }
+
+  .mobile-nav-toggle[aria-expanded='true'] .two {
+    opacity: 0;
+  }
+
+  .mobile-nav-toggle[aria-expanded='true'] .three {
+    top: 6px;
+    transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: 768px) {
+  .btn-primary-header {
+    display: inline-block;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    position: relative;
+    width: 11.25rem;
+    top: 0;
+    left: 0;
+  }
+
+  .btn-nav {
+    display: none;
+    z-index: 250;
+  }
+
+  .world-image-tablet {
+    display: block;
+  }
+}
+
+@media (min-width: 1240px) {
+  .world-image-tablet {
+    display: none;
+  }
+
+  .world-image-desktop {
+    display: block;
+    min-width: 1100px;
+  }
+
+  .location-indicator {
+    position: absolute;
+    top: 7.5rem;
+    left: 55.2rem;
+  }
+
+  .location-indicator:nth-child(5) {
+    top: 18rem;
+    left: 50rem;
+  }
+  .location-indicator:nth-child(3) {
+    top: 6rem;
+    left: 12.75rem;
+  }
+  .location-indicator:nth-child(4) {
+    top: 3.8rem;
+    left: 27.1rem;
+  }
+}
+
+/* -------------------- */
+/* General Styling */
+/* -------------------- */
+
+/* hero */
+
+.hero {
+  background-image: url(assets/images/home-hero-mobile.jpg);
+  background-size: cover;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  padding-top: 7.1875rem;
+  position: relative;
+}
+
+.hero--subpage {
+  background-image: url(assets/images/about-hero-mobile.jpg);
+}
+
+.locations .hero--subpage,
+.careers .hero--subpage {
+  background-image: url(assets/images/careers-location-hero-mobile.jpg);
+}
+
+/* Arrows */
+
+.arrow {
+  position: absolute;
+  height: 8.625rem;
+  width: 46.125rem;
+  max-width: min-content;
+}
+
+.arrow-telemetry,
+.arrow-mission {
+  top: clamp(10rem, 44vw, 18.75rem);
+  left: -0.25rem;
+}
+
+.arrow-city {
+  top: 0;
+  left: -11.75rem;
+}
+
+.arrow-payment {
+  top: 0;
+  left: 5.5rem;
+}
+
+.arrow-digital {
+  top: clamp(8rem, 30vw, 18.75rem);
+  left: -0.5rem;
+}
+
+.arrow-living {
+  top: 0;
+  left: -6.5rem;
+}
+
+/* features */
+
+@media (min-width: 768px) and (max-width: 1240px) {
+  .features-grid {
+    grid-template-columns: 6rem 1fr;
+    max-width: 768px;
+    margin: 0 auto;
+    gap: 5rem;
+    text-align: left;
+  }
+
+  .features-grid p {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-image: url(assets/images/home-hero-tablet.jpg);
+    padding-top: 8.5625rem;
+  }
+
+  .locations .hero--subpage,
+  .careers .hero--subpage {
+    background-image: url(assets/images/careers-locations-hero-tablet.jpg);
+  }
+
+  .arrow-telemetry,
+  .arrow-mission {
+    top: clamp(10rem, 44vw, 18.75rem);
+    left: -7rem;
+  }
+
+  .arrow-city {
+    left: -14.2rem;
+  }
+
+  .arrow-payment {
+    top: 5rem;
+    left: 16rem;
+  }
+
+  .arrow-digital {
+    top: 15.5rem;
+    left: -4.5rem;
+  }
+
+  .arrow-living {
+    left: -9.5rem;
+  }
+}
+
+@media (min-width: 1020px) {
+  .hero {
+    background-image: url(assets/images/home-hero-desktop.jpg);
+  }
+
+  .locations .hero--subpage,
+  .careers .hero--subpage {
+    background-image: url(assets/images/careers-locations-hero-desktop.jpg);
+  }
+
+  .grid-container-faq--about {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 1.75rem;
+  }
+}

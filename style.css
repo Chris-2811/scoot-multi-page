@@ -54,6 +54,10 @@ h3 {
   line-height: 1;
 }
 
+p {
+  line-height: 1.667;
+}
+
 /* Inherit fonts for inputs and buttons */
 input,
 button,
